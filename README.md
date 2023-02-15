@@ -36,3 +36,16 @@ $ python manage.py runserver
 Once the server is hosted, head over to http://127.0.0.1:8000/todos for the App.
 
 Cheers and Happy Coding :)
+
+pip freeze > requirments.tx , 
+this  file shows what reuirments needed
+
+
+
+CODE process 
+1 version control system local 
+2 in server errors arrive  and steps needed for docker wee need
+* apt-get update
+* python
+* code
+* Run 
