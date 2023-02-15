@@ -44,8 +44,19 @@ this  file shows what reuirments needed
 
 CODE process 
 1 version control system local 
+
 2 in server errors arrive  and steps needed for docker wee need
+
 * apt-get update
+1 sudo yum update  -y
+2 sudo yum install git -y
+3 git clone https://github.com/Abzalbasha/
+4 cd django-todo/
+5 pip3 install django
+6 python manage.py migrate
+
+
+
 * python
 * code
 * Run 
