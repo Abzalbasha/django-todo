@@ -117,6 +117,8 @@ sudo docker ps
 
 sudo docker run  port mapping and  container id 
 sudo docker run -p 8000:8000 c548344894
+sudo docker run -d -p 8000:8000 c548344894 
+to run in background use -d
 
 
 
