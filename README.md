@@ -52,11 +52,43 @@ CODE process
 2 sudo yum install git -y
 3 git clone https://github.com/Abzalbasha/
 4 cd django-todo/
+Step1: sudo apt-get update.
+Step2: sudo apt-get install python3-pip
 5 pip3 install django
 6 python manage.py migrate
+Chnage time zone
+7 python3 manage.py runserver
+127.0.0.1:8000/ means run on local host , if u want to expose to world  uit shoud be 0.0.0.0
+python3 manage.py runserver 0.0.0.0:8000
+8 in aws enable tcp port 8000 everywhere in security groups
+9 and allow that in seeting.py file which shows in browser upadte that ip in file in djangp setting.py file add ip or '*' in allowed host
+10 nohup python3 manage.py runserver 0.0.0.0:8000 & 
+it gives ignore input gives output in a file using & and nohup 
+11 lsof -i: 8000  
+it gives what process task runnning on port 8000
+12 kill -9 portnumber
+we can stop process by this
+
+NOW CREATING DOCKER AND ADDING DJANGO FILE IN THAT
+    sudo apt install docker.io
+    vi Docker file  add all docker commands which we did manually
+
+    * python
+
+    FROM python:3 # creates a environment ubuntu where python3 running
+
+    RUN pip3 install django==3.3 # running command install django with version 3.2
+
+    * code
+    COPY . .  # copy code from source to destination first dot source second dot destinantion
+
+
+    * Run 
+    RUN python3 manage.py migrate # which migrates manage file using run 
+
+    
+    CMD ["python3","manage.py","runserver","0.0.0.0:8000"]
 
 
 
-* python
-* code
-* Run 
+
