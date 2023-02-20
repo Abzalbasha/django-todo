@@ -50,14 +50,14 @@ CODE process
 2 in server errors arrive  and steps needed for docker wee need
 
 * apt-get update
-1 sudo yum update  -y
+1 sudo apt-get update  -y
 2 sudo yum install git -y
-3 git clone https://github.com/Abzalbasha/
+3 git clone https://github.com/Abzalbasha/django-todo.git
 4 cd django-todo/
 Step1: sudo apt-get update.
 Step2: sudo apt-get install python3-pip
 5 pip3 install django
-6 python manage.py migrate
+6 python3 manage.py migrate
 Chnage time zone
 7 python3 manage.py runserver
 127.0.0.1:8000/ means run on local host , if u want to expose to world  uit shoud be 0.0.0.0
@@ -119,6 +119,10 @@ sudo docker run  port mapping and  container id
 sudo docker run -p 8000:8000 c548344894
 sudo docker run -d -p 8000:8000 c548344894 
 to run in background use -d
+
+
+Jnekins
+ installation of jenkins 
 
 
 
