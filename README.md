@@ -201,6 +201,12 @@ Finished: SUCCESS
  now make change in code 
 cd /django-todo/todos/templates/todos$ sudo vi index.html
 
+after making chnages
+
+sudo docker  ps 
+sudo docker kill containerid
+then build again in jenkins 
+changes deployed there 
 
 
 
