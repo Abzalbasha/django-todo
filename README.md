@@ -123,6 +123,83 @@ to run in background use -d
 
 Jnekins
  installation of jenkins 
+https://www.trainwithshubham.com/blog/install-jenkins-on-aws
+
+setup jenkins
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+install suggested plugin
+
+ create user id password gmail
+  then u get http://35.175.65.214:8080/
+
+Now installing jenkins from docker 
+
+ sudo systemctl stop jenkins
+
+ sudo docker pull jenkins/jenkins # it pulling jenkins in docker image which have all comands in docker file so we can run easily 
+sudo docker images
+
+sudo docker run -d -p 8080:8080 f16216f97fcb #image id 
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+sudo docker run -d -p 8080:8080 docker.io/jenkins/jenkins:latest
+
+sudo docker ps
+
+node = allows u to create pipeline
+agent create it
+remote root repository add there path of ec2 inastncae using pwd
+/home/ubuntu
+
+use websocket check on
+
+save
+
+create a job means pipeline 
+add permissions in  ubuntu as 
+chmod 777 django-todo/
+
+we r doing contionus delivery 
+so in execute shell 
+cd /home/ubuntu/django-todo
+sudo docker build . -t todo-dev
+sudo docker run -d -p 8000:8000 todo-dev
+
+save and build 
+
+Started by user Abzalbasha
+Running as SYSTEM
+Building remotely on TODO-app-dev (todo-dev) in workspace /home/ubuntu/workspace/tododev
+[tododev] $ /bin/sh -xe /tmp/jenkins8648229809870631794.sh
++ cd /home/ubuntu/django-todo
++ sudo docker build . -t todo-dev
+Sending build context to Docker daemon  582.7kB
+
+Step 1/5 : FROM python:3
+ ---> f92346e0c39e
+Step 2/5 : RUN pip3 install django==3.2
+ ---> Using cache
+ ---> f41745d01af2
+Step 3/5 : COPY . .
+ ---> Using cache
+ ---> 79f71af87c6f
+Step 4/5 : RUN python3 manage.py migrate
+ ---> Using cache
+ ---> 99449521ffb1
+Step 5/5 : CMD ["python3","manage.py","runserver","0.0.0.0:8000"]
+ ---> Using cache
+ ---> 9dbcc122fb68
+Successfully built 9dbcc122fb68
+Successfully tagged todo-dev:latest
++ sudo docker run -d -p 8000:8000 todo-dev
+5d001420077395da3aacd37229be82c3dac22d1a1a99d9f570ac09e485148b4d
+Finished: SUCCESS
+
+
+ now make change in code 
+cd /django-todo/todos/templates/todos$ sudo vi index.html
 
 
 
